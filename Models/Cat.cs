@@ -53,6 +53,36 @@ namespace classes.Models
       return "Hiss";
     }
 
+    //NOTE reset the amount / another medthod
+    public void Catnip()
+    {
+      Pets = 0;
+    }
+
+
+    //NOTE Feed Method / Method overloading
+    public void Feed()
+    {
+      Happy = true;
+      System.Console.WriteLine("mmmmmmmmm");
+    }
+
+    //NOTE method loading, is writing the same method, if you give it different arguments you can run it again and it will treat it as another method
+
+    public void Feed(string food)
+    {
+      if (food == "catfood")
+      {
+        System.Console.WriteLine("mmmmmmmmm");
+        return;
+      }
+      System.Console.WriteLine("BARF");
+    }
+
+    //NOTE method overloading needs to have the same name, return type, but different parameters
+
+
+
     //NOTE if the method is public and the method name is the same of the class it is your constructor
     //NOTE ctor is the hotkey for the constructor
     //NOTE will be within the class / never has a return type. The return type is the object itself
@@ -68,5 +98,21 @@ namespace classes.Models
       // Lives = 9;
       Happy = false;
     }
+
+    //NOTE overloading a constructor
+    //NOTE as long as its the same return type it is ok to use.
+    public Cat(string FullName, int tolerance)
+    {
+      string[] names = FullName.Split(' ');
+      FirstName = names[0];
+      Tolerance = tolerance;
+      LastName = "";
+      if (names.Length > 1)
+      {
+        LastName = names[1];
+      }
+    }
   }
+  //NOTE take a look at the code from Mark that gives the passing parameters of the different way to method overload 
+  //NOTE with FPV
 }

@@ -15,6 +15,10 @@ namespace classes
       //NOTE can SCW because it is a simple getter, its just saying go get the information
       System.Console.WriteLine(snibbley.FirstName);
       System.Console.WriteLine((snibbley.Pet()));
+      snibbley.Pet();
+      snibbley.Pet();
+      snibbley.Feed();
+
     }
   }
 }
