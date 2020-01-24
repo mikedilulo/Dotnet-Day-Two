@@ -26,4 +26,5 @@ namespace classes.Models
       Cats = new List<Cat>();
     }
   }
+  //NOTE in the Udemy videos Building a Console Library in Udemy
 }
